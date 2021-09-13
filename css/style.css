@@ -1,0 +1,17 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* COMMON */
+header {
+    font-family: 'Acme', sans-serif;
+    border: 1px solid black;
+}
+header h1 {
+    font-size: 3rem;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: rgb(41, 177, 221);
+}
