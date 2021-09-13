@@ -113,5 +113,11 @@ const icons = [
 // Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disponibili come da layout.
 
 icons.forEach((element) => {
-    document.getElementById("js-icon").innerHTML += `<i class="${element.family} ${element.prefix}${element.name}"></i>`
+    document.getElementById("js-icon").innerHTML += `
+    <div class="single-icon">
+        <i class="${element.family} ${element.prefix}${element.name}" style= "font-size: 2.3rem;"></i>
+        <div class="icon-name">${element.name}</div>
+    </div>
+    `
 });
+
