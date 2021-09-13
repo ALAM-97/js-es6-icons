@@ -20,16 +20,32 @@ header h1 {
     margin-left: 15px;
     color: rgb(41, 177, 221);
 }
-nav {
+.nav-top {
     display: flex;
     justify-content: center;
     height: 70px;
     padding: 25px 0;
     background-color: rgb(41, 177, 221);
 }
+.nav-bottom {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    padding: 25px 0;
+    background-color: rgb(97, 137, 150);
+}
+input {
+    width: 60px;
+    margin-left: 15px;
+}
+button {
+    margin-left: 15px;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+}
 main {
     background-color: rgb(177, 175, 175);
-    height: calc(100vh - 140px);
+    height: calc(100vh - 210px);
     overflow-y: scroll;
     padding: 20px;
 }

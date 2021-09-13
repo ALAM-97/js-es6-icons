@@ -22,11 +22,20 @@
         <h1>FontIcons</h1>
     </header>
     <nav>
-        <div>FILTRA PER TIPO</div>
-        <select name="category" id="category">
-            <option value="">All</option>
-        </select>
-
+        <div class="nav-top">
+            <div>FILTRA PER TIPO</div>
+            <select name="category" id="category">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="nav-bottom">
+            <div>INSERISCI NUOVA ICONA</div>
+            <input type="text" name="name" id="input-name" placeholder="Name" required>
+            <input type="text" name="family" id="input-family" placeholder="Family" required>
+            <input type="text" name="prefix" id="input-prefix" placeholder="Prefix" required>
+            <input type="text" name="category" id="input-category" placeholder="Category" required>
+            <button id="create">CREA</button>
+        </div>
     </nav>
     <main>
         <div id="js-icon" class="icons">

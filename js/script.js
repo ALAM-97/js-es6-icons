@@ -16,6 +16,22 @@ const printIcons = (arr, container) => {
     );
 };
 
+const addIcons = (arr, container) => {
+    arr.forEach(
+        (element) => {
+            const { name, family, prefix, color } = element;
+
+            container.innerHTML +=
+                `
+            <div class="single-icon">
+                <i class="${family} ${prefix}${name}" style = "color: ${color}"></i>
+                <div class="icon-name">${name}</div>
+            </div>
+            `
+        }
+    );
+};
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -133,6 +149,7 @@ const icons = [
     },
 ];
 
+
 const container = document.getElementById("js-icon");
 
 const colors = {
@@ -190,6 +207,44 @@ categoryOption.addEventListener("change",
         printIcons(filteredIcons, container);
     }
 );
+
+// BONUS 2
+// Aggiungo la possibilità di inserire nuove icone
+
+const createBtn = document.getElementById("create");
+
+const userInputIcon = [];
+
+createBtn.addEventListener("click",
+    function () {
+        const inputName = document.getElementById("input-name").value;
+        const inputFamily = document.getElementById("input-family").value;
+        const inputPrefix = document.getElementById("input-prefix").value;
+        const inputCategory = document.getElementById("input-category").value;
+        userInputIcon.push(
+            {
+                name: inputName,
+                family: inputFamily,
+                prefix: inputPrefix,
+                category: inputCategory
+            }
+        );
+        const userInputColoredIcons = userInputIcon.map(
+            (element) => {
+                return {
+                    ...element,
+                    color: colors[element.category]
+                };
+            }
+        );
+        addIcons(userInputColoredIcons, container);
+    });
+
+
+
+
+
+
 
 
 
